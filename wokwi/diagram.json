@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": -41.4, "left": 2.8, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 183, "left": -10.2, "attrs": {} },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick1",
+      "top": -173.4,
+      "left": -4.2,
+      "attrs": {}
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -126.1, "left": 105.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": -126.1, "left": 182.2, "attrs": {} },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -395.6,
+      "left": 264.8,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "uno:5V", "bb1:bp.1", "red", [ "h3.8", "v-153.7", "h-104.8" ] ],
+    [ "uno:GND.2", "bb1:bn.1", "black", [ "h3.9", "v-144.1", "h-124.8", "v-75.5" ] ],
+    [ "joystick1:GND", "bb1:bn.2", "black", [ "v124.8", "h-28" ] ],
+    [ "joystick1:VCC", "bb1:bp.2", "red", [ "v0" ] ],
+    [ "joystick1:HORZ", "uno:A0", "green", [ "v0" ] ],
+    [ "joystick1:VERT", "uno:A1", "green", [ "v0" ] ],
+    [ "pot1:GND", "bb1:bn.6", "black", [ "v0" ] ],
+    [ "pot1:VCC", "bb1:bp.6", "red", [ "v0" ] ],
+    [ "pot1:SIG", "uno:A5", "green", [ "v220.8", "h100.9" ] ],
+    [ "pot2:GND", "bb1:bn.7", "black", [ "v0" ] ],
+    [ "pot2:VCC", "bb1:bp.7", "red", [ "v0" ] ],
+    [ "pot2:SIG", "uno:A4", "green", [ "h9.2", "v432.1" ] ],
+    [ "keypad1:R1", "uno:13", "cyan", [ "v230.4", "h-250" ] ],
+    [ "keypad1:R2", "uno:12", "cyan", [ "v240", "h-250.5" ] ],
+    [ "keypad1:R3", "uno:11", "cyan", [ "v0" ] ],
+    [ "keypad1:C1", "uno:9", "cyan", [ "v259.2", "h-250.5" ] ],
+    [ "keypad1:C2", "uno:8", "cyan", [ "v268.8", "h-250" ] ],
+    [ "keypad1:C3", "uno:7", "cyan", [ "v278.4", "h-243.75" ] ]
+  ],
+  "dependencies": {}
+}
